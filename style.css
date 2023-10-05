@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.radius{
+
+    border-radius: 5px;
+}
+
+#search_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Centralize horizontalmente */
+    
+    height: 7vh; /* Defina a altura da div conforme necessário */
+    width: 50%;
+    
+    margin: 1% auto 0 auto;
+
+}
+
+#city_input,.search_icon,#search_container{
+
+    background-color: #f2f2f2;
+}
+
+#city_input,.search_icon{
+
+    height: 100%;
+
+}
+
+#city_input{
+    flex: 1;
+    border: none;
+}
+
+.search_icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right:1%; 
+}
+
+#city_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: lightblue;
+    height: 9vh;
+    width: 45%;
+    margin: 1% auto 0 auto;
+}
+
+#city_infos{
+    background-color: lightslategrey;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    margin: 1% auto 0 auto;
+}
+
+#city_weather_main{
+    background-color: red;
+
+    display: flex;
+}
+
+
+
+
+
+
+
+
+

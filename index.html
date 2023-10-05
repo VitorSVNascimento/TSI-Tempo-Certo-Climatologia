@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
     <title>Tempo Certo Climatologia</title>
 </head>
 <body>
-    
+    <main id="container">
+
+        <section id="search_container" class="radius">
+
+            <span class="material-symbols-outlined search_icon radius" >search </span>
+            <input class="radius" type="text" name="city_input_name" id="city_input" placeholder="Cidade...">
+
+        </section>
+
+        <section id="city_name" class="radius">Camanducaia (BR)</section>
+        
+        <section id="city_infos" class="radius">
+
+            <div id="city_weather_main">
+                <div id="main_temp_div">
+                    <div id="main_temp">
+                        <img src="images/nuvem_teste.png" alt="Tempo do dia">
+                        <span id="main_temp_text">25°</span>
+                    </div>
+
+                    <div id="min_max_temp">
+                        <div id="min_div">
+                            <span>Min:</span>
+                            <span id="min_temp_text">8°</span>
+                        </div>
+                        <div id="max_div">
+                            <span>Max:</span>
+                            <span id="max_temp_text">100°</span>
+                        </div>
+                        <div id="max_temp"></div>
+
+                    </div>
+                </div>
+
+                <div id="temp_metrics">
+                    <div><button id="celsius">C</button></div>
+                    <div><button id="kelvin">K</button></div>
+                </div>
+
+                <div id="wind_and_sunrise_div">
+                    <div >
+                        <img src="images/wind_speed.png" alt="Velocidade do vento">
+                        <span id="wind_text">1000</span><span>KM/h</span>
+                    </div>
+                    <div >
+                        <img src="images/sun_rise_icon.png" alt="Nascer do sol">
+                        <span id="sunrise_text">10:37</span><span>hrs</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="city_weather_description">
+                chovendo muito
+            </div>
+
+        </section>
+
+    </main>
 </body>
 </html>
