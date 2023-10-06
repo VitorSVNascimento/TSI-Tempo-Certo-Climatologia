@@ -13,7 +13,7 @@
 
         <section id="search_container" class="radius">
 
-            <span class="material-symbols-outlined search_icon radius" >search </span>
+            <i class="material-symbols-outlined search_icon radius" >search </i>
             <input class="radius" type="text" name="city_input_name" id="city_input" placeholder="Cidade...">
 
         </section>
@@ -25,7 +25,7 @@
             <div id="city_weather_main">
                 <div id="main_temp_div">
                     <div id="main_temp">
-                        <img src="images/nuvem_teste.png" alt="Tempo do dia">
+                        <img width="50px" src="images/nuvem_teste.png" alt="Tempo do dia">
                         <span id="main_temp_text">25°</span>
                     </div>
 
@@ -44,29 +44,36 @@
                 </div>
 
                 <div id="temp_metrics">
-                    <div><button id="celsius">C</button></div>
-                    <div><button id="kelvin">K</button></div>
+                    <div><button class="metric_button" id="celsius">C</button></div>
+                    <div><button class="metric_button" id="kelvin">K</button></div>
                 </div>
 
                 <div id="wind_and_sunrise_div">
-                    <div >
-                        <img src="images/wind_speed.png" alt="Velocidade do vento">
-                        <span id="wind_text">1000</span><span>KM/h</span>
+                    <div class="others_infos" title="Velocidade do vento">
+                        <i class="material-symbols-outlined" id="wind_speed_icon">
+                            air
+                        </i>
+                        <span id="wind_text">100</span><span>KM/h</span>
                     </div>
-                    <div >
-                        <img src="images/sun_rise_icon.png" alt="Nascer do sol">
+                    <div class="others_infos" title="Horário do nascer do sol">
+                        <i class="material-symbols-outlined" id="sunrise_icon">
+                            water_lux
+                        </i>
                         <span id="sunrise_text">10:37</span><span>hrs</span>
                     </div>
 
                 </div>
             </div>
 
-            <div id="city_weather_description">
-                chovendo muito
+            <div id="city_weather_description_div">
+                <span id="city_weather_description">Chovendo muito</span> 
             </div>
 
         </section>
 
     </main>
+
+    <section id="nearby_cities_container">
+    </section>
 </body>
 </html>

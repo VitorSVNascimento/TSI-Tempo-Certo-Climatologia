@@ -13,12 +13,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; /* Centralize horizontalmente */
+    align-items: center; 
     
-    height: 7vh; /* Defina a altura da div conforme necessário */
+    height: fit-content; 
     width: 50%;
     
     margin: 1% auto 0 auto;
+    
 
 }
 
@@ -26,6 +27,8 @@
 
     background-color: #f2f2f2;
 }
+
+
 
 #city_input,.search_icon{
 
@@ -36,6 +39,7 @@
 #city_input{
     flex: 1;
     border: none;
+    font-size: 1.5rem;
 }
 
 .search_icon {
@@ -43,34 +47,116 @@
     align-items: center;
     cursor: pointer;
     margin-right:1%; 
+    
 }
 
 #city_name{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
-    background-color: lightblue;
-    height: 9vh;
+    background-color: #9ad7dc;
+    height: fit-content;
     width: 45%;
     margin: 1% auto 0 auto;
+    font-size: 3rem;
 }
 
 #city_infos{
-    background-color: lightslategrey;
-    height: 20vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    width: 45%;
-
     margin: 1% auto 0 auto;
 }
 
 #city_weather_main{
-    background-color: red;
-
     display: flex;
+    justify-content: center;
 }
+
+#main_temp_div{
+    background-color: #9ad7dc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px 0px 0px 7px;
+    margin: 10px 0px;
+    height: fit-content;
+}
+
+#main_temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    font-size: 8rem;
+}
+
+#min_max_temp{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    font-size: 1.5rem;
+}
+
+#temp_metrics{
+    background-color: #9ad7dc;
+    width: fit-content;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 0px 7px 7px 0px;
+    
+}
+
+#wind_and_sunrise_div{
+    margin: 10px;
+}
+
+.metric_button{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 2rem;
+    margin: 5px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+.others_infos{
+    display: flex;
+    align-items: center;
+    background-color: #9ad7dc;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+}
+
+.material-symbols-outlined{
+    font-size: 3rem;
+}
+
+#sunrise_icon{
+    color: orangered;
+}
+
+#city_weather_description_div{
+    display: flex;
+    justify-content: center;
+
+    border-radius: 7px;
+    font-size: 2rem;
+}
+
+#city_weather_description{
+    background-color: #9ad7dc;
+    border-radius: 7px;
+    width: 50%;
+    text-align: center;
+}
+
+
+
 
 
 
