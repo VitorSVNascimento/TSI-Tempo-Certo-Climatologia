@@ -26,17 +26,17 @@
                 <div id="main_temp_div">
                     <div id="main_temp">
                         <img width="50px" src="images/nuvem_teste.png" alt="Tempo do dia">
-                        <span id="main_temp_text">25°</span>
+                        <span id="main_temp_text">25</span><span>°</span>
                     </div>
 
                     <div id="min_max_temp">
                         <div id="min_div">
                             <span>Min:</span>
-                            <span id="min_temp_text">8°</span>
+                            <span id="min_temp_text">8</span><span>°</span>
                         </div>
                         <div id="max_div">
                             <span>Max:</span>
-                            <span id="max_temp_text">100°</span>
+                            <span id="max_temp_text">100</span><span>°</span>
                         </div>
                         <div id="max_temp"></div>
 
@@ -44,7 +44,7 @@
                 </div>
 
                 <div id="temp_metrics">
-                    <div><button class="metric_button" id="celsius">C</button></div>
+                    <div><button class="metric_button" id="celsius" disabled>C</button></div>
                     <div><button class="metric_button" id="kelvin">K</button></div>
                 </div>
 
@@ -53,7 +53,7 @@
                         <i class="material-symbols-outlined" id="wind_speed_icon">
                             air
                         </i>
-                        <span id="wind_text">100</span><span>KM/h</span>
+                        <span id="wind_text">100</span><span> KM/h</span>
                     </div>
                     <div class="others_infos" title="Horário do nascer do sol">
                         <i class="material-symbols-outlined" id="sunrise_icon">
@@ -75,5 +75,6 @@
 
     <section id="nearby_cities_container">
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
