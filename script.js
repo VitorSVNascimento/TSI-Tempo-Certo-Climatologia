@@ -75,7 +75,7 @@ function update_infos(city_json){
     update_conditions(city_json['sys']['sunrise'],city_json['wind']['speed']);
     update_color(city_json['main']['temp']);
     update_weather_icon(city_json['weather'][0]['icon']);
-    // update_image(city_json['weather'][0]['icon']);
+    update_image(city_json['weather'][0]['icon']);
 }
 
 function update_city_name(city,country){
@@ -165,9 +165,7 @@ function get_color(temp){
 }
 
 function update_image(weather_main_icon_code){
-    const bodyElement = document.body;
-    img_path = `images/${weather_main_icon_code.substring(0,2)}.png`
-    bodyElement.style.setProperty('--image_bg', img_path);
-    bodyElement.style.setProperty('--img_opacity', 0.5);
+    bg_img = document.querySelector('#imagem_fundo');
+    bg_img.src = `images/${weather_main_icon_code.substring(0,2)}.png`
 
 }
