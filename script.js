@@ -39,7 +39,6 @@ function updateFromButton(){
     let main_temp = document.querySelector('#main_temp_text').textContent;
     let max_temp = document.querySelector('#min_temp_text').textContent;
     let min_temp = document.querySelector('#max_temp_text').textContent;
-    console.log(min_temp)
     if(kelvin_button.disabled){
         document.querySelector('#main_temp').style.fontSize = '7rem';
         update_text_temps(celsiusToKelvin(parseFloat(main_temp)),celsiusToKelvin(parseFloat(min_temp)),celsiusToKelvin(parseFloat(max_temp)));
@@ -74,7 +73,9 @@ function update_infos(city_json){
     update_temps(city_json['main']);
     update_description(city_json['weather'][0]['description']);
     update_conditions(city_json['sys']['sunrise'],city_json['wind']['speed']);
-    
+    update_color(city_json['main']['temp']);
+    update_weather_icon(city_json['weather'][0]['icon']);
+    // update_image(city_json['weather'][0]['icon']);
 }
 
 function update_city_name(city,country){
@@ -134,4 +135,39 @@ function timestampToHours(timestamp) {
 function metersPerSecondToKilometersPerHour(mps) {
     const kph = mps * 3.6; 
     return kph.toFixed(1); 
+}
+
+function update_weather_icon(icon_code){
+    weather_image = document.querySelector('#weather_image');
+    weather_image.src = `https://openweathermap.org/img/wn/${icon_code}@2x.png`;
+}
+
+function update_color(main_temp) {
+    let color = get_color(main_temp);
+    document.body.style.backgroundColor=`hsl(${color},80%,50%)`;
+}
+
+
+function get_color(temp){
+   
+    temp=parseInt(temp);
+    if(temp==0){
+        temp=200;
+    }
+     if(temp<0){
+        temp=240;
+    }else if(temp>40){
+       temp=360;
+    }else{
+        temp=(180 - ((180-60)*(temp / 30)));
+    }
+    return temp;
+}
+
+function update_image(weather_main_icon_code){
+    const bodyElement = document.body;
+    img_path = `images/${weather_main_icon_code.substring(0,2)}.png`
+    bodyElement.style.setProperty('--image_bg', img_path);
+    bodyElement.style.setProperty('--img_opacity', 0.5);
+
 }
