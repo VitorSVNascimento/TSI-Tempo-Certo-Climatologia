@@ -15,6 +15,7 @@ search_icon.addEventListener('click', function () {
     search();
 });
 
+
 function search(){
     const city_name = document.querySelector('#city_input').value.trim();
     update_city(city_name);
@@ -55,17 +56,15 @@ function update_city(city_name){
         let resp = req.responseText;
         let city_json = JSON.parse(resp)
         
-        if(city_json['cod'] != SUCCESS_CODE)
-            handle_api_error(city_json);
+        if(city_json['cod'] != SUCCESS_CODE){
+            alert('Essa cidade não é monitorada pelo site');
+            return;
+        }
         update_infos(city_json);
     }
 
     req.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q='+city_name+'&lang=pt_br&units=metric&appid='+API_KEY);
     req.send(null);
-}
-
-function handle_api_error(city_json){
-    alert(city_json['code'])
 }
 
 function update_infos(city_json){
@@ -76,6 +75,12 @@ function update_infos(city_json){
     update_color(city_json['main']['temp']);
     update_weather_icon(city_json['weather'][0]['icon']);
     update_image(city_json['weather'][0]['icon']);
+    show_infos();
+}
+
+function show_infos(){
+    document.querySelector('#city_name').style.display = 'flex'
+    document.querySelector('#city_infos').style.display = 'flex'
 }
 
 function update_city_name(city,country){
@@ -165,7 +170,6 @@ function get_color(temp){
 }
 
 function update_image(weather_main_icon_code){
-    bg_img = document.querySelector('#imagem_fundo');
+    bg_img = document.querySelector('#imagem_fundo')
     bg_img.src = `images/${weather_main_icon_code.substring(0,2)}.png`
-
 }

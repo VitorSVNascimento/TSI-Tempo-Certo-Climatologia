@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Roboto'; /* Dê um nome à sua fonte */
+    src: url('Roboto-Regular.ttf') format('woff'); /* Caminho para o arquivo de fonte WOFF */
+    /* Outras propriedades de fonte, como font-weight, font-style, etc., se necessário */
+}
+
+
 *{
     padding: 0px;
     margin: 0px;
@@ -5,6 +12,7 @@
 }
 
 body{
+    font-family: 'Roboto',sans-serif;
     z-index: -2;
 }
 
@@ -59,21 +67,21 @@ body{
 }
 
 #city_name{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     text-align: center;
 
     background-color: #9ad7dc;
     height: fit-content;
-    width: 45%;
+    width: fit-content;
     margin: 1% auto 0 auto;
     font-size: 3rem;
 }
 
 #city_infos{
     height: fit-content;
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: 1% auto 0 auto;
 }
@@ -151,7 +159,6 @@ body{
 #city_weather_description_div{
     display: flex;
     justify-content: center;
-
     border-radius: 7px;
     font-size: 2rem;
 }
@@ -174,14 +181,14 @@ body{
 
 #imagem_fundo_section{
     position: absolute;
-    background-color: red;
-    width: 80%;
-    height: 95vh;
+    width: calc(100% - 2px);
+    height: calc(100vh - 8px);
     opacity: 40%;
     z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 #imagem_fundo{
@@ -191,9 +198,94 @@ body{
 
 
 
+@media(max-width : 600px){
 
+    body{
+        display: flex;
+        justify-content: center;
+    }
 
+    #main_temp_div{
+        border-radius: 7px;
+        width: 90%;
+        justify-content: center;
+    }
 
+    #city_weather_main{
+        flex-direction: column;
+        align-items: center;
+    }
 
+    #temp_metrics{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+        border-radius: 7px;
+        background-color: transparent;
+    }
 
+    .metric_button{
+        width: 100px;
 
+    }
+
+    .metric_divs{
+        margin: 10px;
+    }
+
+    .others_infos,#city_weather_description_div{
+        font-size: 1.5rem;
+    }
+
+    #city_weather_description{
+        width: 80%;
+    }
+
+    #min_div,#max_div{
+        font-size: 1.8rem;
+    }
+    #search_container{
+        width: fit-content;
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+
+    #city_name{
+        width: 80%;
+    }
+    
+    .search_icon{
+        font-size: 2.2rem;
+    }
+
+    #city_input{
+        font-size: 1.2rem;
+        width: 95%;
+        
+    }
+
+    #grau{
+        margin-right: 50px;
+    }
+
+    
+    #main_temp_text,#grau{
+        font-size: 4rem;    
+    
+    }
+
+    #wind_and_sunrise_div{
+        margin: 0px;
+        width: 80%;
+    }
+
+    #imagem_fundo_section{
+        width: 100%;
+        height: calc(2 * 100vh);
+    }
+
+    #imagem_fundo{
+        object-fit: cover;
+    }
+}

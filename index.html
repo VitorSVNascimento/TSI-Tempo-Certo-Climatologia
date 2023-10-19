@@ -9,7 +9,7 @@
     <title>Tempo Certo Climatologia</title>
 </head>
 <body>
-    <section id="imagem_fundo_section"><img id="imagem_fundo" alt=""> </section>
+    <section id="imagem_fundo_section"><img id="imagem_fundo" src="images/logo.png" alt=""> </section>
     <main id="container">
 
         <section id="search_container" class="radius">
@@ -18,7 +18,7 @@
             <input class="radius" type="text" name="city_input_name" id="city_input" placeholder="Cidade...">
 
         </section>
-
+        
         <section id="city_name" class="radius">Camanducaia (BR)</section>
         
         <section id="city_infos" class="radius">
@@ -27,7 +27,7 @@
                 <div id="main_temp_div">
                     <div id="main_temp">
                         <img id="weather_image" alt="">
-                        <span id="main_temp_text">25</span><span>°</span>
+                        <span id="main_temp_text">25</span><span id="grau">°</span>
                     </div>
 
                     <div id="min_max_temp">
@@ -45,8 +45,8 @@
                 </div>
 
                 <div id="temp_metrics">
-                    <div><button class="metric_button" id="celsius" disabled>C</button></div>
-                    <div><button class="metric_button" id="kelvin">K</button></div>
+                    <div class="metric_divs"><button class="metric_button" id="celsius" disabled>C</button></div>
+                    <div class="metric_divs"><button class="metric_button" id="kelvin">K</button></div>
                 </div>
 
                 <div id="wind_and_sunrise_div">
@@ -73,9 +73,6 @@
         </section>
 
     </main>
-
-    <section id="nearby_cities_container">
-    </section>
     <script src="script.js"></script>
 </body>
 </html>
